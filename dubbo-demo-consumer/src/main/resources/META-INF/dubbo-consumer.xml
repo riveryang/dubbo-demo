@@ -10,8 +10,10 @@
 	
 	<dubbo:application name="dubbo-demo-consumer" />
 	
-	<dubbo:registry address="zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183"></dubbo:registry>
+	<dubbo:registry address="zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183" check="false" />
 	
-	<dubbo:reference id="helloWorldService" interface="org.dubbo.demo.service.HelloWorldService"/>
+	<dubbo:monitor protocol="registry" />
+	
+	<dubbo:reference id="helloWorldService" interface="org.dubbo.demo.service.HelloWorldService" check="false" />
 
 </beans>

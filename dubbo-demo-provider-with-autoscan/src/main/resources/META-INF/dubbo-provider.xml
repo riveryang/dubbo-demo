@@ -18,7 +18,5 @@
 	
 	<dubbo:monitor protocol="registry" />
 	
-	<dubbo:service interface="org.dubbo.demo.service.HelloWorldService" ref="hellWorldService" />
-
-	<bean id="hellWorldService" class="org.dubbo.demo.service.impl.HelloWorldServiceImpl" />	
+	<dubbo:annotation package="org.dubbo.demo.service" />
 </beans>

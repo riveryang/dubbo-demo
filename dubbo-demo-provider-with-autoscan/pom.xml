@@ -8,8 +8,8 @@
 		<artifactId>dubbo-demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>dubbo-demo-provider</artifactId>
-	<name>dubbo-demo-provider</name>
+	<artifactId>dubbo-demo-provider-with-autoscan</artifactId>
+	<name>dubbo-demo-provider-with-autoscan</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
