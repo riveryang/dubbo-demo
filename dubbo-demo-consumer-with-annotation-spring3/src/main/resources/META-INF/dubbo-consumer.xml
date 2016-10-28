@@ -10,13 +10,14 @@
            http://www.springframework.org/schema/context/spring-context-3.0.xsd
            http://code.alibabatech.com/schema/dubbo
            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-
+	
 	<!-- 
 		context:component-scan 与 dubbo:annotation 的顺序无关
-		在服务提供方，dubbo:annotation的package属性必须配置，否则无法扫描到需要暴露的Service服务
+		配置context:component-scan后，dubbo:annotation可以不配置package，直接会使用ApplicationContext中已经存在的bean
+		如果dubbo API的包路径与现有包路径不一致时，需要配置package参数
 	 -->
-
+	
 	<context:component-scan base-package="org.dubbo.demo.service" />
-
-	<dubbo:annotation package="org.dubbo.demo.service" />
+	
+	<dubbo:annotation />
 </beans>

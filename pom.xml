@@ -15,7 +15,8 @@
         <module>dubbo-demo-provider-with-annotation</module>
         <module>dubbo-demo-provider-with-annotation-spring3</module>
         <module>dubbo-demo-consumer</module>
-        <module>dubbo-demo-consumer-annotation</module>
+        <module>dubbo-demo-consumer-with-annotation</module>
+        <module>dubbo-demo-consumer-with-annotation-spring3</module>
 	</modules>
 	
 	<build>
