@@ -20,7 +20,7 @@ public class HelloWorldRunner implements Runnable {
 		final AtomicInteger count = new AtomicInteger(0);
 		final HelloWorldService service = (HelloWorldService) context.getBean("helloWorldProxyServiceImpl");
 		if (service == null) {
-			throw new IllegalArgumentException("Not found service: helloWorldService");
+			throw new IllegalArgumentException("Not found service: helloWorldProxyServiceImpl");
 		}
 		
 		for(;;) {
