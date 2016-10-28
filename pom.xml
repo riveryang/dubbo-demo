@@ -11,9 +11,11 @@
 	<modules>
 		<module>dubbo-demo-api</module>
 		<module>dubbo-demo-provider</module>
-		<module>dubbo-demo-consumer</module>
         <module>dubbo-demo-provider-with-properties</module>
         <module>dubbo-demo-provider-with-annotation</module>
+        <module>dubbo-demo-provider-with-annotation-spring3</module>
+        <module>dubbo-demo-consumer</module>
+        <module>dubbo-demo-consumer-annotation</module>
 	</modules>
 	
 	<build>
