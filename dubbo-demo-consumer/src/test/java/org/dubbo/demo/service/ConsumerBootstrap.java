@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ConcumerBootstrap {
+public class ConsumerBootstrap {
 
 	public static void main(String[] args) throws InterruptedException {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:/META-INF/dubbo-consumer.xml");
@@ -15,8 +15,8 @@ public class ConcumerBootstrap {
 			service.execute(new HelloWorldRunner(context, idx));
 		}
 		
-		synchronized (ConcumerBootstrap.class) {
-			ConcumerBootstrap.class.wait(60 * 60 * 1000);
+		synchronized (ConsumerBootstrap.class) {
+			ConsumerBootstrap.class.wait(60 * 60 * 1000);
 		}
 	}
 }
