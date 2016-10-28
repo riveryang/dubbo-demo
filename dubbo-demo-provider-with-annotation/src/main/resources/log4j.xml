@@ -72,9 +72,6 @@
 	<root>
 		<priority value="DEBUG" />
 		<appender-ref ref="OUT" />
-		<appender-ref ref="INFO" />
-		<appender-ref ref="ERROR" />
-		<appender-ref ref="DEBUG" />
 	</root>
 
 </log4j:configuration>

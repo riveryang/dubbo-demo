@@ -13,7 +13,7 @@
 		<module>dubbo-demo-provider</module>
 		<module>dubbo-demo-consumer</module>
         <module>dubbo-demo-provider-with-properties</module>
-        <module>dubbo-demo-provider-with-autoscan</module>
+        <module>dubbo-demo-provider-with-annotation</module>
 	</modules>
 	
 	<build>
