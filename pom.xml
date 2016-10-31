@@ -11,24 +11,38 @@
 	<modules>
 		<module>dubbo-demo-api</module>
 		<module>dubbo-demo-provider</module>
-        <module>dubbo-demo-provider-with-properties</module>
-        <module>dubbo-demo-provider-with-annotation</module>
-        <module>dubbo-demo-provider-with-annotation-spring3</module>
-        <module>dubbo-demo-consumer</module>
-        <module>dubbo-demo-consumer-with-annotation</module>
-        <module>dubbo-demo-consumer-with-annotation-spring3</module>
+		<module>dubbo-demo-provider-with-properties</module>
+		<module>dubbo-demo-provider-with-annotation</module>
+		<module>dubbo-demo-provider-with-annotation-spring3</module>
+		<module>dubbo-demo-provider-with-annotation-springmvc4</module>
+		<module>dubbo-demo-consumer</module>
+		<module>dubbo-demo-consumer-with-annotation</module>
+		<module>dubbo-demo-consumer-with-annotation-spring3</module>
 	</modules>
-	
+
 	<build>
 		<plugins>
 			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
