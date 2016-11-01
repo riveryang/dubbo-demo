@@ -18,6 +18,7 @@
 		<module>dubbo-demo-consumer</module>
 		<module>dubbo-demo-consumer-with-annotation</module>
 		<module>dubbo-demo-consumer-with-annotation-spring3</module>
+        <module>dubbo-demo-consumer-with-annotation-springmvc4</module>
 	</modules>
 
 	<build>

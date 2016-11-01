@@ -8,8 +8,9 @@
 		<artifactId>dubbo-demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>dubbo-demo-provider-with-annotation</artifactId>
-	<name>dubbo-demo-provider-with-annotation</name>
+	<artifactId>dubbo-demo-consumer-with-annotation-springmvc4</artifactId>
+	<packaging>war</packaging>
+	<name>dubbo-demo-consumer-with-annotation-springmvc4</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -78,9 +79,27 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-			<version>2.5.6</version>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.3.RELEASE</version>
 		</dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
@@ -97,4 +116,20 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <port>8082</port>
+                    <path>/mgr</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <finalName>mgr</finalName>
+                    <server>tomcat7</server>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
