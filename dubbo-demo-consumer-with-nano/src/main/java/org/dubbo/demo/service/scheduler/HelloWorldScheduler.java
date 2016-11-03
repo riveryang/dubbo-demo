@@ -7,6 +7,7 @@ import org.nanoframework.concurrent.scheduler.BaseScheduler;
 import org.nanoframework.concurrent.scheduler.Scheduler;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.google.inject.Inject;
 
 @Scheduler(parallel = 1, cron = "* * * * * ?", beforeAfterOnly = true)
 public class HelloWorldScheduler extends BaseScheduler {
@@ -14,6 +15,7 @@ public class HelloWorldScheduler extends BaseScheduler {
 	
 	private HelloWorldService service;
 	
+	@Inject
 	@Reference(version = "0.0.1", group = "default", check = false, timeout = 3000)
 	public HelloWorldService getService() {
 		return service;
@@ -30,7 +32,7 @@ public class HelloWorldScheduler extends BaseScheduler {
 
 	@Override
 	public void execute() {
-		LOGGER.debug(getService().say(String.valueOf(Math.random())));
+		LOGGER.debug(service.say(String.valueOf(Math.random())));
 	}
 
 	@Override
